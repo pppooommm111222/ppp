@@ -1,5 +1,8 @@
 plugins {
     id("idea")
+    id("com.android.application") version "8.10.1" apply false
+    id("com.android.library") version "8.10.1" apply false
+    id("org.jetbrains.kotlin.android") version "2.1.21" apply false
 }
 
 idea.module {
@@ -9,23 +12,25 @@ idea.module {
 subprojects {
     plugins.withId("com.android.base") {
         android {
-            compileSdk = 34
-            buildToolsVersion = "34.0.0"
-            ndkVersion = "29.0.13113456"
+            compileSdk = 35
+            buildToolsVersion = "35.0.0"
+            ndkVersion = "29.0.13113456" // <-- 给云端把 NDK 加回来
             defaultConfig {
                 minSdk = 24
-                targetSdk = 36
+                targetSdk = 35
             }
             compileOptions {
-                sourceCompatibility = JavaVersion.VERSION_21
-                targetCompatibility = JavaVersion.VERSION_21
+                sourceCompatibility = JavaVersion.VERSION_17
+                targetCompatibility = JavaVersion.VERSION_17
+            }
+            buildFeatures {
+                aidl = true
             }
         }
     }
 }
 
 apply from: 'api/manifest.gradle'
-// 暴力修改，不再读取 Git 信息
 def gitCommitId = "custom"
 def gitCommitCount = 14
 def baseVersionName = "${api_version_major}.6.0"
