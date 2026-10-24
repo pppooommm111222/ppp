@@ -16,7 +16,7 @@ jobs:
     - name: Setup Android SDK
       uses: android-actions/setup-android@v3
       with:
-        packages: 'ndk;29.0.13113456' # <-- 强制云端安装 NDK
+        packages: 'ndk;26.1.10909125'
     - name: Accept Android SDK Licenses
       run: |
         yes | sdkmanager --licenses || true
