@@ -30,7 +30,6 @@ subprojects {
         }
     }
     
-    // 强行让 Kotlin 也使用 Java 17 的版本，解决昨天那个 JVM 兼容性报错
     tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
         kotlinOptions {
             jvmTarget = "17"
