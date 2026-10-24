@@ -3,6 +3,9 @@ plugins {
     id("com.android.application") version "8.10.1" apply false
     id("com.android.library") version "8.10.1" apply false
     id("org.jetbrains.kotlin.android") version "2.1.21" apply false
+    id("dev.rikka.tools.autoresconfig") version "1.2.2" apply false
+    id("dev.rikka.tools.materialthemebuilder") version "1.5.1" apply false
+    id("dev.rikka.tools.refine") version "4.4.0" apply false
 }
 
 idea.module {
@@ -26,10 +29,12 @@ subprojects {
             }
         }
     }
+    
+    // 强行让 Kotlin 也使用 Java 17 的版本，解决昨天那个 JVM 兼容性报错
     tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
-    kotlinOptions {
-        jvmTarget = "17"
-    }
+        kotlinOptions {
+            jvmTarget = "17"
+        }
     }
 }
 
