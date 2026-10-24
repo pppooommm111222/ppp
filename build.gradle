@@ -5,6 +5,7 @@ plugins {
     id("org.jetbrains.kotlin.android") version "2.1.21" apply false
 }
 
+    ndkVersion = "26.1.10909125"
 idea.module {
     excludeDirs += file('out')
 }
