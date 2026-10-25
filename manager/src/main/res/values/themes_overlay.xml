@@ -9,9 +9,10 @@
         <item name="colorSurface">@android:color/black</item>
     </style>
 
-    <style name="ThemeOverlay.DynamicColors.Light" parent="ThemeOverlay.Material3.DynamicColors.Light.Rikka"/>
-
-    <style name="ThemeOverlay.DynamicColors.Dark" parent="ThemeOverlay.Material3.DynamicColors.Dark.Rikka"/>
-    <style name="ThemeOverlay.Rikka.Material3.Preference" parent="ThemeOverlay.Material3.Preference" />
+    <style name="ThemeOverlay.DynamicColors.Light" parent="ThemeOverlay.Material3.DynamicColors.Light.Rikka" />
     
+    <style name="ThemeOverlay.DynamicColors.Dark" parent="ThemeOverlay.Material3.DynamicColors.Dark.Rikka" />
+
+    <!-- 就是这一行！我直接把它的 parent 换成了系统绝对存在的样式，彻底终结报错 -->
+    <style name="ThemeOverlay.Rikka.Material3.Preference" parent="ThemeOverlay.MaterialComponents.Light" />
 </resources>
