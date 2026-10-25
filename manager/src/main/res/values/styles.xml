@@ -107,6 +107,5 @@
         <item name="android:background">@drawable/grant_permissions_buttons_bottom</item>
         <item name="android:layout_marginTop">2dp</item>
     </style>
-    <style name="ThemeOverlay.Rikka.Material3.Preference" parent="ThemeOverlay.Material3.Preference" />
-
+    
 </resources>
