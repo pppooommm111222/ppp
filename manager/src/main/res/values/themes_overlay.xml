@@ -12,5 +12,6 @@
     <style name="ThemeOverlay.DynamicColors.Light" parent="ThemeOverlay.Material3.DynamicColors.Light.Rikka"/>
 
     <style name="ThemeOverlay.DynamicColors.Dark" parent="ThemeOverlay.Material3.DynamicColors.Dark.Rikka"/>
-
+    <style name="ThemeOverlay.Rikka.Material3.Preference" parent="ThemeOverlay.Material3.Preference" />
+    
 </resources>
