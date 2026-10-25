@@ -107,5 +107,20 @@
         <item name="android:background">@drawable/grant_permissions_buttons_bottom</item>
         <item name="android:layout_marginTop">2dp</item>
     </style>
+    <style name="Preference.SimpleMenuPreference" parent="androidx.preference.Preference">
+    <item name="android:layout">@layout/preference_simple_menu</item>
+</style>
+
+<style name="Preference.SimpleMenuPreference.PopupMenu" parent="androidx.preference.Preference">
+    <item name="android:layout">@layout/preference_simple_menu_popup</item>
+</style>
+
+<style name="Preference.SimpleMenuPreference.PopupMenu.ListPopupWindow" parent="androidx.preference.Preference">
+    <item name="android:layout">@layout/preference_simple_menu_popup</item>
+</style>
+
+<style name="Preference.SimpleMenuPreference.Summary" parent="androidx.preference.Preference">
+    <item name="android:layout">@layout/preference_simple_menu</item>
+</style>
     
 </resources>
